@@ -1,5 +1,5 @@
 import streamlit as st
-import qrcode
+import qr_maker
 
 st.title('QRCode Generator')
 
@@ -10,5 +10,5 @@ qr_size = st.slider('Perbesar ', min_value=6, max_value=12, value=6)
 st.write("Ukuran", qr_size)
 
 # (3.1) without logo
-qr_name = qrcode.qr_code(link=hyper_link, logo=False, size=qr_size)
+qr_name = qr_maker.qr_code(link=hyper_link, logo=False, size=qr_size)
 st.image(qr_name, caption='Gambar QRCode')
